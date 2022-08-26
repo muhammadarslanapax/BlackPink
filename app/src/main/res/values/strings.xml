@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BlackPink</string>
+
+    <string name="btn_capture">Capture</string>
+</resources>
