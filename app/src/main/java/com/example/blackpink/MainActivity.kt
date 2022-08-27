@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
     var recyclerView: RecyclerView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
+
+
         setContentView(R.layout.activity_main)
         recyclerView = findViewById(R.id.mainRv)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -62,21 +67,6 @@ class MainActivity : AppCompatActivity() {
 
         dialgo.setCancelable(false)
         dialgo.setContentView(R.layout.custom_dialog)
-
-        val mDisplayMetrics = windowManager.currentWindowMetrics
-        val mDisplayWidth = mDisplayMetrics.bounds.width()
-        val mDisplayHeight = mDisplayMetrics.bounds.height()
-
-
-        val mLayoutParams = WindowManager.LayoutParams()
-        mLayoutParams.width = (mDisplayWidth * 0.75f).toInt()
-        mLayoutParams.height = (mDisplayHeight * 0.25f).toInt()
-        dialgo.window?.attributes = mLayoutParams
-
-
-
-        val window = dialgo.window
-        window!!.setLayout(mDisplayWidth, ConstraintLayout.LayoutParams.WRAP_CONTENT)
         dialgo.btn_no.setOnClickListener {
             dialgo.dismiss()
 

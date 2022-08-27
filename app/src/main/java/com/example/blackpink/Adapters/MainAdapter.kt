@@ -11,8 +11,11 @@ import com.example.blackpink.RingingActivity
 import android.widget.TextView
 import android.view.View
 import android.widget.ImageView
+import com.example.blackpink.CheckCall_Activity
+
 class MainAdapter(var list: List<MainModel>, var activity: Activity) :
     RecyclerView.Adapter<ViewHolderClass>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderClass {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.rv_item, parent, false)
         return ViewHolderClass(view)
@@ -24,7 +27,7 @@ class MainAdapter(var list: List<MainModel>, var activity: Activity) :
         holder.img.setImageResource(m.img)
 
         holder.itemView.setOnClickListener {
-            val i = Intent(activity, RingingActivity::class.java)
+            val i = Intent(activity, CheckCall_Activity::class.java)
             i.putExtra("image", m.img)
             i.putExtra("video", m.video)
             i.putExtra("name1",m.txt.toString())

@@ -19,9 +19,9 @@ class RingingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ringing)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        val txt1 = intent.getStringExtra("name1")
-        val image = intent.getIntExtra("image", 0)
-        val video = intent.getIntExtra("video", 0)
+        val txt1 = intent.getStringExtra("name11")
+        val image = intent.getIntExtra("image1", 0)
+        val video = intent.getIntExtra("video1", 0)
         //Ringtone
         val alert = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE)
          ringtone = RingtoneManager.getRingtone(applicationContext, alert)
